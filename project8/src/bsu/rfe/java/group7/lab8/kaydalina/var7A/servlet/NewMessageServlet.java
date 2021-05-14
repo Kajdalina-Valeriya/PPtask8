@@ -29,6 +29,6 @@ public class NewMessageServlet extends ChatServlet {
             }
         }
 // Перенаправить пользователя на страницу с формой сообщения
-        response.sendRedirect("/chat/compose_message.htm");
+        response.sendRedirect("/project8_war_exploded/compose_message.htm");
     }
 }

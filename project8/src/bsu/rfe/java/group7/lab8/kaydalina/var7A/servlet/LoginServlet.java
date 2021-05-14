@@ -75,7 +75,7 @@ public class LoginServlet extends ChatServlet {
                     "</font></p>");
         }
 // Вывести форму
-        pw.println("<form action='/chat/' method='post'>Введите имя: <input type='text' name='name' value=''><input type='submit' value='Войти в чат'>");
+        pw.println("<form action='/project8_war_exploded/' method='post'>Введите имя: <input type='text' name='name' value=''><input type='submit' value='Войти в чат'>");
         pw.println("</form></body></html>");
 // Сбросить сообщение об ошибке в сессии
         request.getSession().setAttribute("error", null);
@@ -104,7 +104,7 @@ public class LoginServlet extends ChatServlet {
 // Сохранить в сессии сообщение об ошибке
             request.getSession().setAttribute("error", errorMessage);
 // Переадресовать обратно на исходную страницу с формой
-            response.sendRedirect(response.encodeRedirectURL("/chat/"));
+            response.sendRedirect(response.encodeRedirectURL("/project8_war_exploded/"));
         }
     }
     // Возвращает текстовое описание возникшей ошибки или null
@@ -143,7 +143,7 @@ public class LoginServlet extends ChatServlet {
 // Добавить cookie в HTTP-ответ
             response.addCookie(sessionIdCookie);
 // Перейти к главному окну чата
-            response.sendRedirect(response.encodeRedirectURL("/chat/view.htm"));
+            response.sendRedirect(response.encodeRedirectURL("/project8_war_exploded/view.htm"));
 // Вернуть null, т.е. сообщений об ошибках нет
             return null;
         } else {
