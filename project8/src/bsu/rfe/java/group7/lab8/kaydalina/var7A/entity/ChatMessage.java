@@ -12,6 +12,10 @@ public class ChatMessage {
         this.message = message;
         this.author = author;
         this.timestamp = timestamp;
+      /*  while (true)
+        {
+         if(getTimestamp()-)
+        }*/
     }
     public String getMessage() {
         return message;
@@ -32,4 +36,3 @@ public class ChatMessage {
         this.timestamp = timestamp;
     }
 }
-

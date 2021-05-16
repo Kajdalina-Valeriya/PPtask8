@@ -1,11 +1,15 @@
 package bsu.rfe.java.group7.lab8.kaydalina.var7A.servlet;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import bsu.rfe.java.group7.lab8.kaydalina.var7A.entity.ChatMessage;
 import bsu.rfe.java.group7.lab8.kaydalina.var7A.entity.ChatUser;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
 public class ChatServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     // Карта текущих пользователей
@@ -25,17 +29,17 @@ public class ChatServlet extends HttpServlet {
         if (activeUsers==null) {
 // Создать новую карту
             activeUsers = new HashMap<String, ChatUser>();
-// Поместить еѐ в контекст сервлета,
+// Поместить ее в контекст сервлета,
 // чтобы другие сервлеты могли до него добраться
             getServletContext().setAttribute("activeUsers",
                     activeUsers);
         }
-// Если список сообщений не определѐн ...
+// Если список сообщений не определен ...
         if (messages==null) {
 // Создать новый список
             messages = new ArrayList<ChatMessage>(100);
 // Поместить его в контекст сервлета,
-// чтобы другие сервлеты могли до него добрать
+// чтобы другие сервлеты могли до него добраться
             getServletContext().setAttribute("messages", messages);
         }
     }
